@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .auto-style2 {
+            height: 20px;
+        }
+        .auto-style3 {
+            height: 20px;
+            width: 85px;
+        }
+        .auto-style4 {
+            width: 85px;
+        }
+        .auto-style5 {
+            width: 111px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script>
+        function initializeApp(data) {
+
+            alert(data);
+            //document.getElementById('languagefield').textContent = data.language;
+            //document.getElementById('viewtypefield').textContent = data.context.viewType;
+            document.getElementById('ShowUserid').textContent = data.context.userId;
+            //document.getElementById('utouidfield').textContent = data.context.utouId;
+            document.getElementById('ShowRoomid').textContent = data.context.roomId;
+            document.getElementById('ShowGroupid').textContent = data.context.groupId;
+
+            // openWindow call
+            document.getElementById('openwindowbutton').addEventListener('click', function () {
+                liff.openWindow({
+                    url: 'https://developers.line.me/en/docs/liff/developing-liff-apps/'
+                });
+            });
+
+            // closeWindow call
+            document.getElementById('closewindowbutton').addEventListener('click', function () {
+                liff.closeWindow();
+            });
+
+            //get profile call
+            document.getElementById('getprofilebutton').addEventListener('click', function () {
+                liff.getProfile().then(function (profile) {
+                    document.getElementById('useridprofilefield').textContent = profile.userId;
+                    document.getElementById('displaynamefield').textContent = profile.displayName;
+
+                    var profilePictureDiv = document.getElementById('profilepicturediv');
+                    if (profilePictureDiv.firstElementChild) {
+                        profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+                    }
+                    var img = document.createElement('img');
+                    img.src = profile.pictureUrl;
+                    img.alt = "頭像";
+                    profilePictureDiv.appendChild(img);
+
+                    document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+
+                    toggleProfileData();
+                }).catch(function (error) {
+                    window.alert("取得使用者個人資料錯誤碼: " + error);
+                });
+            });
+        }
+        
+        $(document).ready(function () {
+
+            liff.init(function (data) {
+                //initializeApp(data);
+                $('#ShowUserid').val(data.context.userId);
+                $('#ShowUtouId').val(data.context.utouId);
+                $('#ShowRoomid').val(data.context.roomId);
+                $('#ShowGroupid').val(data.context.groupId);
+
+                $('#type').val(data.context.type);
+
+                $('#squareId').val(data.context.squareId);
+                $('#squareChatId').val(data.context.squareChatId);
+                $('#squareMemberId').val(data.context.squareMemberId);
+            });
+
+            var baseUrl = 'http://localhost:53599/api/';
+            var uploadUrl = 'http://mangeapi.azurewebsites.net/api/';
+            
+            $('#sendUserid').click(function () {
+                alert('s1');
+                $.ajax({
+                    type: 'post',
+                    url: 'https://mangeapi.azurewebsites.net/api/lifftest',
+                    data: { "user_id": $('#ShowUserid').val() },
+                    success: function (data) {
+                        alert('data='+data);
+                        alert('success');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;&nbsp;&nbsp;
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style3">userId</td>
+                <td class="auto-style2">
+        <input id="ShowUserid" type="text" /></td>
+                <td class="auto-style2"></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">utouId</td>
+                <td class="auto-style2">
+        <input id="ShowUtouId" type="text" /></td>
+                <td class="auto-style2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">GroupId</td>
+                <td>
+        <input id="ShowGroupid" type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">RoomId</td>
+                <td>
+        <input id="ShowRoomid" type="text" /><input id="sendUserid" type="button" value="userId" class="auto-style5" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">squareId</td>
+                <td>
+                    <input id="squareId" type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">squareChatId</td>
+                <td>
+                    <input id="squareChatId" type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">squareMemberId</td>
+                <td>
+                    <input id="squareMemberId" type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">type</td>
+                <td>
+                    <input id="type" type="text" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4">&nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </p>
+
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+
+</body>
+</html>

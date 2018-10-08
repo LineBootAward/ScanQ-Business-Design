@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>搖號寶</title>
+    <title>LineHack隊伍-ScanQ</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -15,22 +15,152 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/stepBar.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
     <style>
+        * {
+            font-family: 微軟正黑體;
+        }
+
+        .font-family {
+            font-family: 微軟正黑體 !important;
+        }
+
         .about-section {
             /*padding-top: 10rem;*/
             background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%);
         }
         /*.about-section> img{*/
-            /*margin:0px !important;
+        /*margin:0px !important;
             padding:0px !important;
         }*/
         .background-gray {
             background-color: #F2F2F2 !important;
         }
+
         .bg-super-gray {
             background-color: rgba(137, 136, 136, 0.66) !important;
+        }
+
+        .flex_img {
+            
+        }
+
+        .flex_img > img {
+            margin-right: 100px;
+            
+        }
+
+        .overflow_container {
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            /*margin-left: 250px;*/
+            /*text-align: center;*/
+        }
+        .img-container {
+            width: 60px;
+            /*height: 233.52px;*/
+            margin-right:20px;
+            flex: 1;
+            flex: 1;
+        }
+
+        #queue_icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 5px;
+            margin-top: -5px;
+        }
+        /*.masthead-content{
+            margin-top:-150px;
+        }*/
+        .font-linegreen {
+            color: #20FF97 !important;
+        }
+
+        .font-black {
+            color: #2f2d2c !important;
+        }
+
+        .font-light {
+            color: #2f2d2c !important;
+        }
+
+        .text-bg-black {
+            background-color: rgba(98, 95, 95, 0.80);
+        }
+
+        .masthead-btn {
+            margin-top: 300px;
+        }
+
+        .intro-lead-in-margin {
+            margin-top: -25px;
+        }
+
+        #mainNav {
+            z-index: 10;
+        }
+
+        .zindex {
+            z-index: 1 !important;
+        }
+
+        .p-text {
+            font-size: 24px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+        }
+
+        .left-p-text {
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+        }
+
+        .left-p-text-top {
+            margin-top: 50px;
+            margin-bottom: -10px;
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+        }
+
+        .left-h3-text {
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+
+        .h1-margin {
+            margin-top: -100px;
+        }
+
+        .section-heading-margin {
+        }
+
+        #mainNav {
+            z-index: 999;
+        }
+
+        @media screen and (min-width:736px) {
+            /*.overflow_container {
+                margin-left: 250px !important;
+            }*/
+            .masthead{
+                margin-top:30px;
+            }
+
+            .masthead-content {
+                margin-top: -200px;
+            }
         }
     </style>
 </head>
@@ -38,29 +168,36 @@
 <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">搖號寶</a>
+        <div class="container ">
+            <a class="navbar-brand nav-link js-scroll-trigger " href="#mainNav"> <img class="img-responsive" id="queue_icon" src="img/queue_icon.png" alt="Demo_Icon">ScanQ</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 大綱
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
+                <ul class="navbar-nav ml-auto font-family">
+                    <!--<img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">-->
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">我們的服務</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">功能特點</a>
+                        <a class="nav-link js-scroll-trigger" href="#aboutScanQ">關於ScanQ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">使用流程</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">團隊</a>
+                        <a class="nav-link js-scroll-trigger" href="#services">我們的服務</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">聯絡方式</a>
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">預期效益</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tech">技術特點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">團隊成員</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">聯絡資訊</a>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -69,171 +206,66 @@
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">歡迎使用叫號寶!</div>
-                <div class="intro-heading text-uppercase">未來的Line API使用模式</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">查看更多</a>
+                <div class="masthead-content">
+                    <div class="intro-lead-in font-linegreen">Line-Hack 2018 專案項目</div>
+                    <div class="intro-heading font-linegreen">ScanQ</div>
+                    <br>
+                    <div class="intro-lead-in intro-lead-in-margin text-bg-black">新型態叫號系統與<br>未來的Line API應用方式</div>
+                </div>
+                <div class="masthead-btn">
+                    <a class="btn btn-secondary font-family btn-xl text-uppercase js-scroll-trigger" href="#aboutScanQ">詳情介紹</a>
+                </div>
             </div>
         </div>
     </header>
-    <section class ="bg-super-gray" id="services">
+    <section class="background-gray" id="aboutScanQ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center ">
-                    <!--<h2 class="mb-4">Built with Bootstrap 4</h2>-->
-                    <!--<div class="intro-lead-in">歡迎使用叫號寶!</div>
-            <div class="intro-heading text-uppercase">未來的Line API使用模式</div>
-            <div class="intro-lead-in">歡迎使用叫號寶!</div>
-            <div class="intro-heading text-uppercase">未來的Line API使用模式</div>-->
-                    <p class="text-black-50">
-                        Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                        <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.
+                    <br />
+                    <h1 class="h1-margin">關於ScanQ</h1>
+                    <p class="p-text">
+                        <br />
+                        ScanQ是應用在實體店家、博物館、美術館、醫院等<br />
+                        的虛實整合系統，主要提供排隊管理與叫號通知的服務，
+                        減少使用者因為不知道於隊伍中要等候多久產生的恐慌。
+                    </p>
+                    <p class="p-text ">
+                        透過掃瞄包含LIFF URL與服務店家資訊的客製化QRCODE<br />
+                        使用者即可在LINE APP中啟用ScanQ為該場域提供的排隊等服務。
+                        無需輸入繁瑣的實時場域資訊。<br />
+                    </p>
+                    <p class="p-text ">
+                        ScanQ提供跨平台的PWA手機應用，讓使用者在Line裡直接轉傳下載連結，將Line做為APP發行平台。
+                        得到連結者透過PWA連結就可以將應用程式加入手機中，並不需要經由APP Store和Google Play審核。<br>
+                        我們也設計了安全機制把關轉傳過程。<br>
+                        <br>
                     </p>
                 </div>
             </div>
-            <img src="img/ipad.png" class="img-fluid" alt="Demo_Image">
-        </div>
-    </section>
-    <!-- Services -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">我們的服務</h2>
-                    <h3 class="section-subheading text-muted">最便捷且易於使用的移動式叫號系統</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">LineBot機器人</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">LIFF行動式網頁</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">PWA手機應用</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <br/>
+            <div class="flex_img">
+                <div class="overflow_container">
+                    <div class="img-container">
+                        <img src="img/mockup/Demo_1_iphone7plussilver_portrait.png" class="img-fluid" alt="Demo_Image">
+                    </div>
+                    <div class="img-container">
+                        <img src="img/mockup/demo2_iphone7silver_portrait.png" class="img-fluid" alt="Demo_Image">
+                    </div>
+                    <!--  <div class="img-container">-->
+                    <!--<img src="img/mockup/Demo_1_iphone7plussilver_portrait.png" class="img-fluid" alt="Demo_Image">
+            </div>-->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Portfolio Grid -->
-    <section id="portfolio" class="background-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">功能特點</h2>
-                    <h3 class="section-subheading text-muted">全新的API使用方式</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>移動式機器人</h4>
-                        <p class="text-muted">運行在網頁、LINE APP各式平台的機器人系統</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>掃碼啟用</h4>
-                        <p class="text-muted">於指定店家掃碼可立即開啟服務</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>快速叫號</h4>
-                        <p class="text-muted">任何店家都能立即配合搖號寶提供更好用戶體驗</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Line Pay</h4>
-                        <p class="text-muted">最好的行動支付方式</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>整合式系統</h4>
-                        <p class="text-muted">Message API、LIFF的新整合方式</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>提高客戶滿意度</h4>
-                        <p class="text-muted">智能叫號為用戶規劃最能夠充分使用時間的方式</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About -->
-    <section id="about" >
+    <!-- 使用流程 -->
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">使用流程</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
@@ -241,7 +273,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/service/scan_1vs1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -250,13 +282,13 @@
                                     <h4 class="subheading">掃描店家旁QRCODE</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">提供店家線上申請特約QR code，並擺放於櫃檯上，以方便顧客現場抽號碼牌，掃碼後會出現一個LIFF內嵌網頁</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/about/Demo_1_iphone7plussilver.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -264,35 +296,35 @@
                                     <h4 class="subheading">與LIFF機器人進行互動</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">LIFF頁面會顯示抽到的號碼與預計等待時間，並附有確定抽牌或是放棄的按鈕，按下確定鍵，在後端資料庫中連結店家與客戶號碼牌資料。</p>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/about/ADDFriend.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>第三步</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
+                                    <h4 class="subheading">加入排隊LineBot</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">在等待時間中，LineBot會自動推播排隊店家的菜單或相關資訊，也可以結合廣告推播業務，提供周遭景點資訊及其他商店排隊情況，也可即時放棄排隊。</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                                <img class="rounded-circle img-fluid" src="img/about/demo2_iphone7silver_portrait.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>第四步</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4 class="subheading">取得號碼牌並於快到號時提醒報到</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">確定加入台隊序列後，LineBot會傳出由Flex Message組成的號碼牌，顯示號碼與到號時間，於快到號時提醒顧客報到。</p>
                                 </div>
                             </div>
                         </li>
@@ -310,129 +342,243 @@
             </div>
         </div>
     </section>
+    <!-- Services -->
+    <section id="services" class="background-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase section-heading-margin">我們的服務</h2>
+                    <h3 class="section-subheading text-muted">
+                        ScanQ系統包括LIFF與LINEBOT，使用LINE PAY付款。<br>
+                        使用者可於LINE中轉傳ScanQ  PWA應用程式。<br>
+                        讓分享對象將應用程式加入手機桌面。<br>
+                    </h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-robot fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">LineBot機器人</h4>
+                    <p class="text-muted">提供預計等待時間及報到提醒服務，並推播周遭景點訊息，使用者不會陷入傳統排隊不知道要等待多久的恐慌。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">LIFF行動式網頁</h4>
+                    <p class="text-muted">掃碼後開啟LIFF行動網頁，按下開始排隊後，自動加入排隊群組，連結店家與顧客的號碼牌資料鏈。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">PWA手機應用</h4>
+                    <p class="text-muted">
+                        PWA應用程式服務被設計為可於Line中讓使用者轉傳，將Line APP升級為APP發行平台。我們的PWA應用也可以一鍵掃碼排隊。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">預期效益</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/night_market.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>支持無法建構推播系統的小規模店家</h4>
+                        <p class="text-muted">僅需手機就可以完成叫號機的功能，節省登記排隊的工作與抽號機的建置成本。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/scan.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>掃碼啟用</h4>
+                        <p class="text-muted">直覺化掃碼開啟LIFF網頁並加入服務群組</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/connect.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>任意發布/任意追蹤</h4>
+                        <p class="text-muted">任何店家都能立即配合搖號寶提供更好用戶體驗任何店家/個人都能在LineBot上發起排隊並產生追隨QR code，只要掃碼就能即時知道自己的號碼快到了，無須再排起長長的隊伍。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/line_pay.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Line Pay</h4>
+                        <p class="text-muted">使用目前最便捷的Line Pay，發布排隊只需要支付少許金額。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/many.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>提升系統整合度</h4>
+                        <p class="text-muted">結合LIFF網頁與Line Bot API，完成資訊推播與不同店家的客製化服務。</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/queue.jpeg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>提高客戶滿意度</h4>
+                        <p class="text-muted">告知等待時間，並於快到時提醒，有效提高客戶滿意度，避免排隊造成動線阻塞。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tech" class="background-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center ">
+                    <h1 class="h1-margin">技術特點</h1>
+                    <p class="left-p-text-top">
+                        ScanQ有四個獨家的技術亮點:
+                        <br />
+                        <br>
+                        <br />
+                    </p>
+                    <p class="left-h3-text">
+                        1.LIFF & QRCODE結合操作簡化流程:
+                    </p>
+                    <p class="left-p-text ">
+
+                        <br />
+                        掃描Line QR僅能加入LINE好友，無法連結進一步的實體資訊，我們加入另一個QR code，
+                        這個QR code附帶店家資訊並可開啟LIFF網頁進行抽號碼牌操作，
+                        完成操作後自動關閉，提高操作流暢性。
+                        <br />
+                        <br>
+                    </p>
+                    <p class="left-h3-text">
+                        2.LIFF/LINEBOT共用對話流程引擎:
+                    </p>
+                    <p class="left-p-text">
+                        <br />
+                        當需要輸入的東西變得複雜，或是有多種流程，便不再適合簡易的對話介面，由此我們利用
+                        LIFF網頁，進行瀏覽菜單、線上點餐、抽好碼牌的操作。之後再由BOT提供服務。
+                        <br />
+                        我們選擇自行架構系統的對話流程處理引擎，同時用於LIFF與LINEBOT服務，而不使用現有BOT框架。
+                        因此可以順暢的讓聊天機器人針對使用者在BOT聊天室、LIFF介面上的一連串操作做回應。
+                        <br />
+                        <br>
+                    </p>
+                    <p class="left-h3-text">
+                        3.使用LINE加入PWA流程:
+                    </p>
+                    <p class="left-p-text ">
+                        <br />
+                        約兩年前，微信釋出小程序開發程式，Line APP開發者至今並沒有對應的系統功能<br />
+                        <br />
+                        2018/04，IOS11.3 Safari瀏覽器宣告支持PWA應用，同年2018/06，LINE官方釋出LIFF。<br />
+                        <br />
+                        我們即結合兩者的功能，
+                        創造能夠在LINE APP中輕易傳遞且跨平台的應用程式，
+                        無須經由APP STORE與GOOLE PLAY商店審核即能提供服務。
+
+                        針對習慣APP使用者，我們運用LIFF SDK開啟Native Browser，透過我們自製的引導條與流程，指示使用者加入
+                        PWA應用程式。在Android或IOS裝置我們有各自的引導流程。
+                        <br />
+                        <br>
+                    </p>
+                    <p class="left-h3-text">
+                        4.PWA轉傳機制:
+                    </p>
+                    <p class="left-p-text ">
+                        <br />
+                        使用者可透過LINEBOT Message轉傳PWA應用程式的連結，讓LINE由傳統的聊天程式，升級成APP的發行平台。<br>
+                        <br>
+
+                        以IOS系統為例，ScanQ的轉傳先利用服務網站，藉由Angular的Auth-Guard隱藏LIFF註冊ID並過濾異常參數。
+                        在保障LIFF網站的安全性同時，使用LIFF啟用Safari瀏覽器，於Safari瀏覽器中引導使用者加入應用程式至自家手機系統。<br>
+
+                        <br />
+                    </p>
+                </div>
+            </div>
+            <!--<div class="flex_img">
+                <div class="overflow_container">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                </div>
+            </div>-->
+        </div>
+    </section>
+
     <!-- Team -->
     <section class="bg-light" id="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">我們的團隊</h2>
-                    <h3 class="section-subheading text-muted">獨角獸工程師團體</h3>
+                    <h2 class="section-heading text-uppercase">團隊成員</h2>
+                    <h3 class="section-subheading text-muted">攻城獅與PM</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/Charley_Yang.jpg" alt="">
                         <h4>楊承祐</h4>
                         <p class="text-muted">Charley Yang</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <p class="text-muted">畢業於台灣科技大學電資學士班</p>
+                        <p class="text-muted">&nbsp;大三前往德國新創企業SWG SportWerk GmbH實習，大四於工業電腦龍頭「研華」實習半年設計物聯網系統，目前待役並在美商Ruckus實習。自身由實驗室及實習經驗中學習硬體電路、韌體及軟體，致力於建構完整的物聯網服務系統。</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/Shang_Wei.jpg" alt="">
                         <h4>蔡尚葳</h4>
                         <p class="text-muted">Shang-Wei Tsai</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <p class="text-muted">海洋大學系統工程暨造船學系碩士，待役中</p>
+                        <p class="text-muted">使用Angular6、Jquery、bootstrap、node.js與asp.net web api2、.net core</p>
+                        <p class="text-muted">曾經參與研華科技物聯網實習計畫，完成其舉辦的Tic 100競賽中參賽者提案的系統，並參與公司SRP專案重構，致力於撰寫高內聚、低耦合的程式碼。</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-                        <h4>看戲的</h4>
-                        <p class="text-muted">不甘我的事</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <img class="mx-auto rounded-circle" src="img/team/Feng_Ren.jpg" alt="">
+                        <h4>豐任</h4>
+                        <p class="text-muted">Feng-Ren</p>
+                        <p class="text-muted">英國Manchester企管碩士，某銀行MA</p>
+                        <p class="text-muted">專長為數位行銷、專案管理，曾經參與某公司網頁、物聯網應用APP開發等計畫專案</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Clients -->
-    <!-- <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- Contact -->
-    <section id="contact">
+
+    <!--<section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">我們的聯絡方式</h2>
+                    <h2 class="section-heading text-uppercase">聯絡資訊</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
@@ -470,10 +616,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Footer -->
-    <footer>
-        <div class="container">
+    <!-- <footer>-->
+    <!--<div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Our Website 2018</span>
@@ -509,7 +655,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>-->
     <!-- Portfolio Modals -->
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">

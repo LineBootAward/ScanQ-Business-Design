@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>chatboxAndForm</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        /* twitter 藍色  #1DA1F2  淺藍#4AB3F4  dj; 框線 E6ECF0*/
+        /* 藍色 button
+        1.background:linear-gradient(80deg, #3ca4ff, #185edd); */
+        /* 2. background:linear-gradient(0deg, #5a6dee, #053b90); */
+        /* 3.orange background:linear-gradient(98deg, #e9aa43, #e09220 18%, #e9aa43 32%, #e9aa43 67%, #e09220 83%, #e9aa43) */
+        /* 4.icon green background:linear-gradient(0deg, #22e5a6, #01df8a) */
+        /* 5. sky blue  background:linear-gradient(0deg, #08d0ff, #2180e8) */
+        /* 6. lite blue background:linear-gradient(256deg, #08d0ff, #3ca4ff)
+        background:linear-gradient(0deg, #ffa305, #ff5a53) */
+        /* 7.亮橘封面 background:linear-gradient(0deg, #ffa305, #ff5a53) */
+        /* 8.紫色封面 background:linear-gradient(257deg, #ff3a3a, #fd267d); */
+        /* 9. lite blue 對話 background:linear-gradient(256deg, #08d0ff, #3ca4ff); */
+        /* background-image:linear-gradient(to top, #3ca4ff, transparent); */
+        /* background-image:linear-gradient(to top, #3ca4ff, transparent); */
+        /* 10.對話框 #3CA4FF */
+        /* 11.紫色按鈕 background:linear-gradient(257deg, #ff3a3a, #fd267d)
+        background:linear-gradient(262deg, #ff7854, #fd267d)
+        background:linear-gradient(to top, #7c48c3, rgba(207,89,255,0.1))*/
+        /* 12.桃紅色 background:linear-gradient(257deg, #ff3a3a, #fd267d) */
+        /* 13.紅色首頁 background-image:linear-gradient(to bottom, #fd5068, #ff7854) */
+        /* linear-gradient(50deg, #ff7854, #fd267d) */
+        /* 14.紫紅色 background-image:linear-gradient(262deg, #ff7854, #fd267d) */
+        /* 15.右上角紫紅色  background-image:linear-gradient(50deg, #ff7854, #fd267d) */
+        /* 16.紫色background-image:linear-gradient(to top, #7c48c3, rgba(207,89,255,0.1)); */
+        /* 17.Gray background-image:linear-gradient(to top, rgba(0,0,0,0.5), transparent) */
+        /* 18.facebook background-image:linear-gradient(80deg, #38489C, #337AB7); */
+        body {
+            border: 1px solid #000000;
+            /* background-image: linear-gradient(#6689bb, #cbd5eb); */
+            background-image: linear-gradient(To bottom, #08d0ff, #3ca4ff);
+            /* width: 100%; */
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .liffPage {
+            box-sizing: border-box;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 734px;
+        }
+
+        .liffContainer {
+            width: 250px;
+            height: 250px;
+            margin-top: 130px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+            .liffContainer > img {
+                width: 100%;
+                height: 100%;
+            }
+
+        .Bot_TextBox {
+            border: 1px solid #000000;
+            margin-top: 20px;
+            width: 250px;
+            height: 100px;
+            font-size: 24px;
+            font-family: 微軟正黑體;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .Bot_Option {
+            border: 1px solid #000000;
+            width: 250px;
+            height: 100px;
+            margin-top: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="type.css">
+</head>
+<body>
+
+    <div class="liffPage">
+        <div class="liffContainer">
+            <img src="image/brain.png" alt="Image" />
+        </div>
+        <div class="Bot_TextBox">
+            <!-- <button onclick="typeWriter()">Click me</button> -->
+            <p id="demo"></p>
+            <!-- <div class="text animated">
+                <div class="like-a animated" id="txt1">
+                    <p>Hello World</p>
+                </div>
+            </div>
+            <br>
+            <div class="animated" id="txt2">
+
+            </div> -->
+        </div>
+        <div class="Bot_Option"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+</body>
+</html>
