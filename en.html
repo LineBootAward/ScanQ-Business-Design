@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ScanQ</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/stepBar.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <style>
+
+        #MSvideoContainer {
+            width: 434px;
+            height: 806px;
+            margin-left: 50px;
+            display: block;
+            float: left;
+            background: url("http://www.makrshakr.com/wp-content/uploads/2016/03/iphone.png") center center no-repeat;
+            background-size: cover;
+        }
+
+        #MSvideoContent {
+            padding-top: 139px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: 微軟正黑體;
+        }
+
+        .font-family {
+            font-family: 微軟正黑體 !important;
+        }
+
+        .about-section {
+            /*padding-top: 10rem;*/
+            background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%);
+        }
+        /*.about-section> img{*/
+        /*margin:0px !important;
+            padding:0px !important;
+        }*/
+        .background-gray {
+            background-color: #F2F2F2 !important;
+        }
+
+        .bg-super-gray {
+            background-color: rgba(137, 136, 136, 0.66) !important;
+        }
+
+        .flex_img {
+        }
+
+            .flex_img > img {
+                margin-right: 100px;
+            }
+
+        .overflow_container {
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            /*margin-left: 250px;*/
+            /*text-align: center;*/
+        }
+
+        .img-container {
+            width: 60px;
+            /*height: 233.52px;*/
+            margin-right: 20px;
+            flex: 1;
+            flex: 1;
+        }
+
+        #queue_icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 5px;
+            margin-top: -5px;
+        }
+        /*.masthead-content{
+            margin-top:-150px;
+        }*/
+        .font-linegreen {
+            color: #20FF97 !important;
+        }
+
+        .font-black {
+            color: #2f2d2c !important;
+        }
+
+        .font-light {
+            color: #2f2d2c !important;
+        }
+
+        .text-bg-black {
+            background-color: rgba(98, 95, 95, 0.80);
+        }
+
+        .masthead-btn {
+            margin-top: 300px;
+        }
+
+        .intro-lead-in-margin {
+            margin-top: -25px;
+        }
+
+        #mainNav {
+            z-index: 10;
+        }
+
+        .zindex {
+            z-index: 1 !important;
+        }
+
+        .p-text {
+            font-size: 24px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+        }
+
+        .left-p-text {
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+        }
+
+        .left-p-text-top {
+            margin-top: 50px;
+            margin-bottom: -10px;
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+        }
+
+        .left-h3-text {
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            color: #2f2d2c !important;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+
+        .h1-margin {
+            margin-top: -100px;
+        }
+
+        .section-heading-margin {
+        }
+
+        #mainNav {
+            z-index: 999;
+        }
+
+        @media screen and (min-width:736px) {
+            /*.overflow_container {
+                margin-left: 250px !important;
+            }*/
+            .masthead {
+                margin-top: 30px;
+            }
+
+            .masthead-content {
+                margin-top: -200px;
+            }
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container ">
+            <a class="navbar-brand nav-link js-scroll-trigger " href="#mainNav"> <img class="img-responsive" id="queue_icon" src="img/queue_icon.png" alt="Demo_Icon">ScanQ</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                大綱
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto font-family">
+                    <!--<img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">-->
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#aboutScanQ">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">Flow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Benefit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#tech">Feature</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#team">Member</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">聯絡資訊</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                <div class="masthead-content">
+                    <!-- <div class="intro-lead-in font-linegreen">Line-Hack 2018 專案項目</div> -->
+                    <div class="intro-heading font-linegreen">ScanQ</div>
+                    <br>
+                    <div class="intro-lead-in intro-lead-in-margin text-bg-black">Making Queuing Easier</div>
+                </div>
+                <div class="masthead-btn">
+                    <a class="btn btn-secondary font-family btn-xl text-uppercase js-scroll-trigger" href="#aboutScanQ">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="background-gray" id="aboutScanQ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center ">
+                    <br />
+                    <h1 class="h1-margin">About</h1>
+                    <p class="p-text">
+                        <br />
+                        ScanQ is a modern queuing app for stores, museums, clinic and hospitals. ScanQ provide queuing management for manager to know their queueing customer better and leverage more. Meanwhile, Customer can get queue number and notification from LINE and make queue easier.
+                    </p>
+                    <p class="p-text ">
+                        By using LIFF URL and customize QR Code for stores. Customer can just scan QR Code from stores and get queue number without giving other useless time and information on queuing. LINE BOT would be giving response when customer using LIFF and help customer finish queue process.
+                        <br />
+                    </p>
+                    <p class="p-text ">
+                        ScanQ not only provide Ads, guide, menu and games during people who is queuing to make queuing people not feeling bored but also helping queuing people provides stores information before entering stores to make stores arrange quicker.
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <br />
+            <div class="flex_img">
+                <div class="overflow_container">
+                    <div id="MSvideoContainer">
+                        <div id="MSvideoContent">
+                            <iframe width="300" height="543" src="https://www.youtube.com/embed/iLY0MMgy6fs?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div id="MSvideoContainer">
+                        <div id="MSvideoContent">
+                            <iframe width="300" height="543" src="https://www.youtube.com/embed/uZ7wK0L1xDU?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!--  <div class="img-container">-->
+                    <!--<img src="img/mockup/Demo_1_iphone7plussilver_portrait.png" class="img-fluid" alt="Demo_Image">
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 使用流程 -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Flow</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/service/scan_1vs1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>STEP 1</h4>
+                                    <h4 class="subheading">Open LINE APP</h4>
+                                    <h4 class="subheading">Sacn QR CODE</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        Store manager can generate QR Code by themselves.
+                                        The page will be shown when the costumers scan the QRCODE.
+                                </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/Demo_1_iphone7plussilver.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>STEP 2</h4>
+                                    <h4 class="subheading">Interacting with BOT</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        The number will be shown after scan and customer can give up or make confirmation by clicking YES/NO button.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/ADDFriend.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>STEP 3</h4>
+                                    <h4 class="subheading">Making queue interesting</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">During the waiting time, ScanQ not only provide Ads, guide, menu and games during people who is queuing to make queuing people not feeling bored but also helping queuing people provides stores information before entering stores to make stores arrange quicker.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="img/about/demo2_iphone7silver_portrait.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>STEP 4</h4>
+                                    <h4 class="subheading">Reminding </h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">ScanQ would make notification for customer when the number is closing.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Customer
+                                    <br>Feeback
+                                    <br>100%!
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <!-- <section id="services" class="background-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase section-heading-margin">Service</h2>
+                    <h3 class="section-subheading text-muted">
+                        ScanQ系統包括LIFF與LINEBOT，使用LINE PAY付款。<br>
+                        使用者可於LINE中轉傳ScanQ  PWA應用程式。<br>
+                        讓分享對象將應用程式加入手機桌面。<br>
+                    </h3> -->
+    </div>
+    </div>
+    <!-- <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-robot fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">LINE BOT</h4>
+                    <p class="text-muted">Provide waiting time, remind services, menu, Ads even games, make queue easier.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-mobile-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Combining LINE and Web</h4>
+                    <p class="text-muted">掃碼後開啟LIFF行動網頁，按下開始排隊後，自動加入排隊群組，連結店家與顧客的號碼牌資料鏈。</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">PWA手機應用</h4>
+                    <p class="text-muted">
+                        PWA應用程式服務被設計為可於Line中讓使用者轉傳，將Line APP升級為APP發行平台。我們的PWA應用也可以一鍵掃碼排隊。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Portfolio Grid -->
+    <section id="portfolio" class="background-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Benefit</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/night_market.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>For Small Stores</h4>
+                        <p class="text-muted">Build Queue System by Your Smart Phone Only</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/scan.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Scan and Get Number</h4>
+                        <p class="text-muted">Get Number with One Scan</p>
+                    </div>
+                </div>
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/connect.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>任意發布/任意追蹤</h4>
+                        <p class="text-muted">任何店家都能立即配合搖號寶提供更好用戶體驗任何店家/個人都能在LineBot上發起排隊並產生追隨QR code，只要掃碼就能即時知道自己的號碼快到了，無須再排起長長的隊伍。</p>
+                    </div>
+                </div> -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/line_pay.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Line Pay</h4>
+                        <p class="text-muted">Pay Your Bill via LIN PAY With Few Steps</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/many.jpg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Customize</h4>
+                        <p class="text-muted">Building with LINE API, Integrating System Eaisly</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="portfolio-link">
+                        <img class="img-fluid" src="img/service/queue.jpeg" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Getting Better Customer Satisfaction</h4>
+                        <p class="text-muted">Providing Waiting Time, Remind call, get higher feeback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tech" class="background-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center ">
+                    <h1 class="h1-margin">ScanQ Is Made By</h1>
+                    <!-- <p class="left-p-text-top">
+                        ScanQ有四個獨家的技術亮點:
+                        <br />
+                        <br>
+                        <br />
+                    </p> -->
+                    <p class="left-h3-text">
+                        1.Combine LIFF & QRCODE:
+                    </p>
+                    <p class="left-p-text ">
+                        <br />
+                        Customer can get number by scan QRCode with LIFF information
+                        <br />
+                        <br>
+                    </p>
+                    <p class="left-h3-text">
+                        2.LIFF & LINEBOT Conversation:
+                    </p>
+                    <p class="left-p-text">
+                        <br />
+                        We using LIFF when the process is getting complicated. Customer just click button on LIFF page and get response on LINE to make flow more reasonable.
+                        <br />
+                        <br>
+                    </p>
+                    <p class="left-h3-text">
+                        3.Add PWA from LINE:
+                    </p>
+                    <p class="left-p-text ">
+                        <br />
+                        Using LIFF SDK from LINE to open Native Browser and guide user how to add web page as app without install application from app store.
+                        <br />
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <!--<div class="flex_img">
+                <div class="overflow_container">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                    <img src="img/iphone_demo.png" class="img-fluid col-md-3 col-sm-6" alt="Demo_Image">
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Who We Are</h2>
+                    <!-- <h3 class="section-subheading text-muted">攻城獅與PM</h3> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/Charley_Yang.jpg" alt="">
+                        <h4>楊承祐</h4>
+                        <p class="text-muted">Charley Yang</p>
+                        <p class="text-muted">畢業於台灣科技大學電資學士班</p>
+                        <p class="text-muted">&nbsp;大三前往德國新創企業SWG SportWerk GmbH實習，大四於工業電腦龍頭「研華」實習半年設計物聯網系統，目前待役並在美商Ruckus實習。自身由實驗室及實習經驗中學習硬體電路、韌體及軟體，致力於建構完整的物聯網服務系統。</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/Shang_Wei.jpg" alt="">
+                        <h4>蔡尚葳</h4>
+                        <p class="text-muted">Shang-Wei Tsai</p>
+                        <p class="text-muted">海洋大學系統工程暨造船學系碩士，待役中</p>
+                        <p class="text-muted">使用Angular6、Jquery、bootstrap、node.js與asp.net web api2、.net core</p>
+                        <p class="text-muted">曾經參與研華科技物聯網實習計畫，完成其舉辦的Tic 100競賽中參賽者提案的系統，並參與公司SRP專案重構，致力於撰寫高內聚、低耦合的程式碼。</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="img/team/Feng_Ren.jpg" alt="">
+                        <h4>豐任</h4>
+                        <p class="text-muted">Feng-Ren</p>
+                        <p class="text-muted">英國Manchester企管碩士，某銀行MA</p>
+                        <p class="text-muted">專長為數位行銷、專案管理，曾經參與某公司網頁、物聯網應用APP開發等計畫專案</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">聯絡資訊</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Footer -->
+    <!-- <footer>-->
+    <!--<div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Our Website 2018</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>-->
+    <!-- Portfolio Modals -->
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Threads</li>
+                                    <li>Category: Illustration</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Explore</li>
+                                    <li>Category: Graphic Design</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Finish</li>
+                                    <li>Category: Identity</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Lines</li>
+                                    <li>Category: Branding</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Southwest</li>
+                                    <li>Category: Website Design</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li>Date: January 2017</li>
+                                    <li>Client: Window</li>
+                                    <li>Category: Photography</li>
+                                </ul>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+</body>
+
+</html>
